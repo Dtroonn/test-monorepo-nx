@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/my-app/src",
+  "sourceRoot": "apps/my-new-app-2/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,16 +9,19 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/my-app",
-        "index": "apps/my-app/src/index.html",
+        "outputPath": "dist/apps/my-new-app-2",
+        "index": "apps/my-new-app-2/src/index.html",
         "baseHref": "/",
-        "main": "apps/my-app/src/main.tsx",
-        "polyfills": "apps/my-app/src/polyfills.ts",
-        "tsConfig": "apps/my-app/tsconfig.app.json",
-        "assets": ["apps/my-app/src/favicon.ico", "apps/my-app/src/assets"],
-        "styles": ["apps/my-app/src/styles.css"],
+        "main": "apps/my-new-app-2/src/main.tsx",
+        "polyfills": "apps/my-new-app-2/src/polyfills.ts",
+        "tsConfig": "apps/my-new-app-2/tsconfig.app.json",
+        "assets": [
+          "apps/my-new-app-2/src/favicon.ico",
+          "apps/my-new-app-2/src/assets"
+        ],
+        "styles": ["apps/my-new-app-2/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "webpackConfig": "@nrwl/react/plugins/webpack"
       },
       "configurations": {
         "development": {
@@ -30,8 +33,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/my-app/src/environments/environment.ts",
-              "with": "apps/my-app/src/environments/environment.prod.ts"
+              "replace": "apps/my-new-app-2/src/environments/environment.ts",
+              "with": "apps/my-new-app-2/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -47,15 +50,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "my-app:build",
+        "buildTarget": "my-new-app-2:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "my-app:build:development"
+          "buildTarget": "my-new-app-2:build:development"
         },
         "production": {
-          "buildTarget": "my-app:build:production",
+          "buildTarget": "my-new-app-2:build:production",
           "hmr": false
         }
       }
@@ -64,14 +67,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/my-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/my-new-app-2/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/my-app"],
+      "outputs": ["coverage/apps/my-new-app-2"],
       "options": {
-        "jestConfig": "apps/my-app/jest.config.ts",
+        "jestConfig": "apps/my-new-app-2/jest.config.ts",
         "passWithNoTests": true
       }
     }

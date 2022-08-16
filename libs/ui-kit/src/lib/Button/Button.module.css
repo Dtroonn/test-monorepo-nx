@@ -1,0 +1,7 @@
+.btn {
+    height: 40px;
+    min-width: 200px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

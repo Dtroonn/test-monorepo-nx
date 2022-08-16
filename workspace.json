@@ -3,6 +3,10 @@
   "version": 2,
   "projects": {
     "my-app": "apps/my-app",
-    "my-app-e2e": "apps/my-app-e2e"
+    "my-app-e2e": "apps/my-app-e2e",
+    "my-new-app-2": "apps/my-new-app-2",
+    "my-new-app-2-e2e": "apps/my-new-app-2-e2e",
+    "ui-kit": "libs/ui-kit",
+    "ui-kit-e2e": "apps/ui-kit-e2e"
   }
 }
